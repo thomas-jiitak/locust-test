@@ -1,0 +1,21 @@
+name: Run Locust Tests
+
+on: [push]
+
+jobs:
+  locust:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Locust Performance Tests
+        uses: thomasvjoseph/locust@v1.1.1
+        with:
+          URL: https://www.netflix.com
+          LOCUSTFILE: locustfile.py
+          USERS: 20
+          RATE: 5
+          RUNTIME: 1m
+          HEADLESS: true
+          LOGLEVEL: DEBUG
