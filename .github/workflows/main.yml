@@ -22,7 +22,7 @@ jobs:
           html_report: 'example.html'
       
       - name: List Files in Workspace
-        run: ls -l /github/workspace
+        run: ls -l
 
       - name: Upload Locust Test Results
         uses: actions/upload-artifact@v4
