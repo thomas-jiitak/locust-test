@@ -19,6 +19,7 @@ jobs:
           RUNTIME: 30s
           HEADLESS: true
           LOGLEVEL: DEBUG
+          html_report: 'example.html'
 
       - name: Upload Locust Test Results
         uses: actions/upload-artifact@v4
