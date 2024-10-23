@@ -16,15 +16,18 @@ jobs:
           LOCUSTFILE: locustfile.py
           USERS: 2   # Reduced number of users
           RATE: 1    # Reduced request rate
-          RUNTIME: 30s
+          RUNTIME: 10s
           HEADLESS: true
           LOGLEVEL: DEBUG
           html_report: 'example.html'
+      
+      - name: List Files in Workspace
+        run: ls -l /github/workspace
 
       - name: Upload Locust Test Results
         uses: actions/upload-artifact@v4
         with:
           name: locust-report
-          path: /github/workspace/example.html
+          path: example.html
           if-no-files-found: warn
           retention-days: 1
