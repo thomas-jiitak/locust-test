@@ -25,4 +25,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: locust-report
-          path: load_test_report.html
+          path: /github/workspace/example.html
+          if-no-files-found: warn
+          retention-days: 1
