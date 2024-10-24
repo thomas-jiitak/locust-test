@@ -14,7 +14,7 @@ jobs:
         with:
           URL: https://www.netflix.com
           LOCUSTFILE: locustfile.py
-          USERS: 2   # Reduced number of users
+          USERS: 3   # Reduced number of users
           RATE: 1    # Reduced request rate
           RUNTIME: 10s
           HEADLESS: true
